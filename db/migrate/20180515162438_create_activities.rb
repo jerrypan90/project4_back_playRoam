@@ -4,8 +4,10 @@ class CreateActivities < ActiveRecord::Migration[5.2]
       t.string :user_id
       t.string :title
       t.string :genre
+      t.string :date
+      t.string :start_time
+      t.string :end_time
       t.string :venue
-      t.string :time
       t.string :max_pax
       t.string :current_pax
 

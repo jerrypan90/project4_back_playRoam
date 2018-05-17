@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(version: 2018_05_15_162438) do
     t.string "user_id"
     t.string "title"
     t.string "genre"
+    t.string "date"
+    t.string "start_time"
+    t.string "end_time"
     t.string "venue"
-    t.string "time"
     t.string "max_pax"
     t.string "current_pax"
     t.datetime "created_at", null: false
