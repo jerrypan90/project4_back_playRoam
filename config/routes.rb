@@ -5,8 +5,13 @@ Rails.application.routes.draw do
   
   resources :users do
     resources :activities
+    resources :rsvps
   end
 
-  resources :activities
+  resources :activities do
+    resources :rsvps
+  end
+
+  resources :rsvps
   
 end

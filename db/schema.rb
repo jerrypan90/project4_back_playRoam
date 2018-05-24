@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_15_162438) do
+ActiveRecord::Schema.define(version: 2018_05_17_064340) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 2018_05_15_162438) do
     t.string "venue"
     t.string "max_pax"
     t.string "current_pax"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rsvps", force: :cascade do |t|
+    t.string "user_id"
+    t.string "activity_id"
+    t.string "attendance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+    # def index
+    #     user_activities = User.find(params[:user_id])
+    #     render json: user_activities
+    # end
+
     def create
         user = User.new(user_params)
         user.save!
