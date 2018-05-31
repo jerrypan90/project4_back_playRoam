@@ -1,7 +1,10 @@
 class RsvpsController < ApplicationController
     def index
-        rsvps = Rsvp.all
-        render json: rsvps
+        # rsvps = Rsvp.all
+        # render json: rsvps
+
+        userRsvp = Activity.where(:id => Rsvp.where(:user_id => params[:user_id]))
+        render json: userRsvp
     end
 
     def create
